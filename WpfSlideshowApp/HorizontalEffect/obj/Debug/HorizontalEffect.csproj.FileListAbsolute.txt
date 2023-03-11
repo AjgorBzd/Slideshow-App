@@ -1,0 +1,9 @@
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\bin\Debug\HorizontalEffect.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\bin\Debug\HorizontalEffect.pdb
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\bin\Debug\Library.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\bin\Debug\Library.pdb
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\obj\Debug\HorizontalEffect.csproj.AssemblyReference.cache
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\obj\Debug\HorizontalEffect.csproj.CoreCompileInputs.cache
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\obj\Debug\HorizontalEffect.csproj.CopyComplete
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\obj\Debug\HorizontalEffect.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\HorizontalEffect\obj\Debug\HorizontalEffect.pdb
