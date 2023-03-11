@@ -1,0 +1,9 @@
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\bin\Debug\VerticalEffect.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\bin\Debug\VerticalEffect.pdb
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\bin\Debug\Library.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\bin\Debug\Library.pdb
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\obj\Debug\VerticalEffect.csproj.AssemblyReference.cache
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\obj\Debug\VerticalEffect.csproj.CoreCompileInputs.cache
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\obj\Debug\VerticalEffect.csproj.CopyComplete
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\obj\Debug\VerticalEffect.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\VerticalEffect\obj\Debug\VerticalEffect.pdb

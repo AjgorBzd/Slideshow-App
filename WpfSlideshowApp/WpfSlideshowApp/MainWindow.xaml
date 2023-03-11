@@ -1,0 +1,117 @@
+﻿<Window x:Class="WpfSlideshowApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSlideshowApp"
+        mc:Ignorable="d"
+        Title="Image Slideshow" Height="600" Width="800" WindowStartupLocation="CenterScreen" MinHeight="600" MinWidth="800">
+    <Window.Resources>
+        
+        <Style x:Key="justtext" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Width" Value="auto"/>
+        </Style>
+        <Style x:Key="valuetext" TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="2">
+            <MenuItem x:Name="File" Header="File">
+                <MenuItem x:Name="Open_Folder" Header="Open Folder" Click="Open_Folder_Click"></MenuItem>
+                <MenuItem x:Name="Exit" Header="Exit" Click="Exit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="Menu_slideshow" Header="Start Slideshow" Click="Menu_slideshow_Click"></MenuItem>
+            <MenuItem x:Name="About" Header="About" Click="About_Click"></MenuItem>
+        </Menu>
+
+        <ScrollViewer x:Name="leftscroll" CanContentScroll="True" VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1" Margin="5,5,0,5">
+
+            <Border BorderBrush="Black" BorderThickness="1" SnapsToDevicePixels="True">
+                <StackPanel Orientation="Vertical" CanVerticallyScroll="True" ScrollBar.Scroll="StackPanel_Scroll">
+                    <Expander x:Name="Explorer" Header=" Explorer" Margin="10,5" VerticalAlignment="Top" IsExpanded="True" Loaded="Explorer_Loaded" >
+                        <TreeView x:Name="Explorer_Tree" Background="WhiteSmoke" Padding="5">
+                        </TreeView>
+                    </Expander>
+                    <Expander x:Name="File_info" Header="File Info" VerticalAlignment="Top" Margin="10,5">
+                        <Border BorderBrush="Gray" BorderThickness="1" SnapsToDevicePixels="True">
+                            <Grid Background="WhiteSmoke" x:Name="Fileinfo_grid" Loaded="Fileinfo_grid_Loaded" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </Border>
+                    </Expander>
+                    <Expander x:Name="Slideshow" Header="Slideshow" VerticalAlignment="Top" Margin="10,5">
+                        <Border BorderBrush="Gray" BorderThickness="1" SnapsToDevicePixels="True">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Select slideshow effect:" Padding="5" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" Grid.Row="0"/>
+                                <ComboBox x:Name="effects" Margin="5,5,5,2" Grid.Row="1" Height="25">
+
+                                </ComboBox>
+                                <Button Content="Start slideshow" Margin="5" Height="30" Click="StartSlideshow" Grid.Row="2"/>
+                            </Grid>
+                        </Border>
+                    </Expander>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+
+        <Border BorderBrush="Black" BorderThickness="1" Margin="5" Grid.Column="1" Grid.Row="1" SnapsToDevicePixels="True">
+            <ScrollViewer x:Name="rightscroll" VerticalScrollBarVisibility="Auto" CanContentScroll="True">
+                <ListView ItemsSource="{Binding}" PreviewMouseWheel="StackPanel_PreviewMouseWheel" SelectionChanged="ListView_SelectionChanged" MouseRightButtonDown="ListView_MouseRightButtonDown">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel  Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=ScrollViewer}}"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="150" Height="150">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="5" Color="Gray"/>
+                                </Border.Effect>
+                                <StackPanel  Orientation="Vertical" PreviewMouseWheel="StackPanel_PreviewMouseWheel" Background="White">
+                                    <Image x:Name="thumbnail" Width="130" Height="100" Margin="0,10" Source="{Binding picture}"/>
+                                    <Label Content="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </StackPanel>
+                            </Border>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </Border>
+
+
+    </Grid>
+</Window>

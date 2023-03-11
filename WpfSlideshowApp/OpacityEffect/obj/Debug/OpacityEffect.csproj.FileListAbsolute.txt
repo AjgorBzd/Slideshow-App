@@ -1,0 +1,9 @@
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\bin\Debug\OpacityEffect.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\bin\Debug\OpacityEffect.pdb
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\bin\Debug\Library.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\bin\Debug\Library.pdb
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\obj\Debug\OpacityEffect.csproj.AssemblyReference.cache
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\obj\Debug\OpacityEffect.csproj.CoreCompileInputs.cache
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\obj\Debug\OpacityEffect.csproj.CopyComplete
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\obj\Debug\OpacityEffect.dll
+C:\Users\Igor Bzdwka\source\repos\WpfSlideshowApp\OpacityEffect\obj\Debug\OpacityEffect.pdb
